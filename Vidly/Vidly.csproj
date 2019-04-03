@@ -217,12 +217,26 @@
     <Compile Include="Migrations\201904011108516_MoreMovieProperties.Designer.cs">
       <DependentUpon>201904011108516_MoreMovieProperties.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201904031030151_Validations Customer\Movies.cs" />
+    <Compile Include="Migrations\201904031031531_Validations Customer and Movie.cs" />
+    <Compile Include="Migrations\201904031031531_Validations Customer and Movie.Designer.cs">
+      <DependentUpon>201904031031531_Validations Customer and Movie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904031036480_Movie name length.cs" />
+    <Compile Include="Migrations\201904031036480_Movie name length.Designer.cs">
+      <DependentUpon>201904031036480_Movie name length.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904031111088_Movie new validations.cs" />
+    <Compile Include="Migrations\201904031111088_Movie new validations.Designer.cs">
+      <DependentUpon>201904031111088_Movie new validations.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\MembershipType.cs" />
+    <Compile Include="Models\Min18YearsIfAMember.cs" />
     <Compile Include="Models\Movie.cs" />
     <Compile Include="Models\MovieGenre.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -340,6 +354,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201904011108516_MoreMovieProperties.resx">
       <DependentUpon>201904011108516_MoreMovieProperties.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904031031531_Validations Customer and Movie.resx">
+      <DependentUpon>201904031031531_Validations Customer and Movie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904031036480_Movie name length.resx">
+      <DependentUpon>201904031036480_Movie name length.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904031111088_Movie new validations.resx">
+      <DependentUpon>201904031111088_Movie new validations.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
