@@ -8,7 +8,7 @@ using Vidly.Models;
 using Vidly.ViewModel;
 
 namespace Vidly.Controllers
-{
+{    
     public class MoviesController : Controller
     {
         private ApplicationDbContext _context;
@@ -23,6 +23,7 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
+        [Authorize(Roles = RoleName.CanManagerMovies)]
         public ActionResult New()
         {
             var viewModel = new MovieFormViewModel
@@ -76,8 +77,14 @@ namespace Vidly.Controllers
         // GET: Movies/Random
         public ActionResult Index()
         {
-            var movies = _context.Movies.Include(m => m.MovieGenre).ToList();
-            return View(movies);
+            if (User.IsInRole("CanManagerMovies"))
+            {
+                return View("List");
+            }
+            else
+            {
+                return View("ReadOnlyList");
+            }
         }
 
         public ActionResult Details(int id)
