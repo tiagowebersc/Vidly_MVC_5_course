@@ -77,7 +77,7 @@ namespace Vidly.Controllers
         // GET: Movies/Random
         public ActionResult Index()
         {
-            if (User.IsInRole("CanManagerMovies"))
+            if (User.IsInRole(RoleName.CanManagerMovies))
             {
                 return View("List");
             }
