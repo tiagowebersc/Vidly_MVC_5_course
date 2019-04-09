@@ -47,6 +47,7 @@ namespace Vidly.Controllers.API
             if (!ModelState.IsValid) return BadRequest();
 
             var movie = Mapper.Map<MovieDto, Movie>(movieDto);
+            movie.TotalAvailable = movie.TotalStock;
             _context.Movies.Add(movie);
             _context.SaveChanges();
 
